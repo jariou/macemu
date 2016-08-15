@@ -198,14 +198,14 @@ struct	ip_timestamp {
 #ifdef HAVE_SYS_TYPES32_H  /* Overcome some Solaris 2.x junk */
 #include <sys/types32.h>
 #else
-#if SIZEOF_CHAR_P == 4
+#if SIZEOF_CHAR_P == 4 || SIZEOF_CHAR_P == 8
 typedef caddr_t caddr32_t;
 #else
 typedef u_int32_t caddr32_t;
 #endif
 #endif
 
-#if SIZEOF_CHAR_P == 4
+#if SIZEOF_CHAR_P == 4 || SIZEOF_CHAR_P == 8
 typedef struct ipq *ipqp_32;
 typedef struct ipasfrag *ipasfragp_32;
 #else
