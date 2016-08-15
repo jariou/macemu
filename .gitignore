@@ -6,3 +6,7 @@
 
 # Mac OS X metadata
 *.DS_Store
+
+vagrant/.vagrant/
+vagrant/*.log
+

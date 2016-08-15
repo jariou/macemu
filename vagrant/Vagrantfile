@@ -48,7 +48,7 @@ Vagrant.configure(2) do |config|
   sudo make dev
   sudo make install
   sudo modprobe sheep_net
-  sudo chown vagrant:vagrant /dev/sheep_net
+  sudo chown ubuntu:ubuntu /dev/sheep_net
   SCRIPT
   config.vm.provision "shell", inline: $script, privileged: false
 
