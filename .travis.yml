@@ -8,10 +8,6 @@ matrix:
     - os: osx
       osx_image: xcode8.3
 
-compiler:
-  - gcc
-  - clang
-
 addons:
   apt:
     packages:
@@ -25,8 +21,6 @@ before_install:
 
 script:
   - cd BasiliskII/src/Unix
-  - make all
-  - make clean
   - NO_CONFIGURE=1 ./autogen.sh
   - ./configure --enable-sdl-video --enable-sdl-audio --disable-vosf --disable-jit-compiler --with-x --with-gtk --with-mon
   - make -j 4
